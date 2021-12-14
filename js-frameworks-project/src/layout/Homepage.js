@@ -1,10 +1,11 @@
 import React from 'react'
+import Heading from '../components/Heading'
 import Results from '../components/Results'
 
 function Homepage() {
     return (
         <div>
-            <p>Homepage content</p>
+            <Heading title="Test"/>
             <Results />
         </div>
     )

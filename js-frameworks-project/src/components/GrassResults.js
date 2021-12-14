@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { API } from "../constants/api";
+import { grassAPI } from "../constants/api";
 import CardItem from "./CardItem";
 
-function Cards() {
+function GrassCards() {
     const [pokeCards, setCards] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -10,13 +10,12 @@ function Cards() {
     useEffect(function () {
         async function fetchData() {
          try {
-          const response = await fetch(API);
+          const response = await fetch(grassAPI);
       
           if (response.ok) {
            const results = await response.json();
            const json = results.cards;
-           console.log(json);
-           
+        //    console.log(json);
            setCards(json);
           } else {
            setError("An error occured");
@@ -41,7 +40,6 @@ function Cards() {
        return (
         <div className="cards">
             {pokeCards.map(function (card) {
-
                 const { id, name, supertype } = card;
                 return <CardItem key={id} id={id} name={name} supertype={supertype} />;
             })}
@@ -49,4 +47,4 @@ function Cards() {
        );
 }
 
-export default Cards;
+export default GrassCards;
