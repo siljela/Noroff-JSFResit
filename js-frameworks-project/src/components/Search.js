@@ -10,7 +10,6 @@ export const Search = () => {
     const [searchResults, sortedCards] = useState([]);
 
     useEffect(() => {
-        // const cardURL = `${API}properties`;
         async function loadCards() {
           try {
             const response = await fetch(API);

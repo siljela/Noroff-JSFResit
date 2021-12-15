@@ -15,7 +15,7 @@ function Cards() {
           if (response.ok) {
            const results = await response.json();
            const json = results.cards;
-           console.log(json);
+        //    console.log(json);
            
            setCards(json);
           } else {

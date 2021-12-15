@@ -26,7 +26,7 @@ function CardDetail() {
 					if (response.ok) {
                         const results = await response.json();
                         const json = results.card;
-                        console.log(json);
+                        // console.log(json);
                         setCards(json);
 					} else {
 						setError("An error occured");
