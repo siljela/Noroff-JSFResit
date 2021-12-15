@@ -2,21 +2,22 @@ body {
   font-family: $font-primary;
   background: $colour-background;
 }
-
-ul {
-  list-style: none;
-  padding-left: 0;
+header {
+  background-image: url("https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
+  filter: brightness(150%);
+  padding: 200px;
 }
 
-li {
-  background: $colour-ui-primary;
-  padding: 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 7px $colour-ui-shadow;
-  transition: all 0.4s;
+footer {
+  background-color: $colour-ui-secondary;
+  color: $colour-ui-third;
+  display: flex;
 }
-
-li:hover {
-  box-shadow: none;
+footer a {
+  color: $colour-ui-third;
+  text-decoration: none;
+  list-style-type: none;
+}
+footer a:hover {
+  filter: brightness(1.75);
 }

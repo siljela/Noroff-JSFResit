@@ -10,6 +10,7 @@ export const Search = () => {
     const [searchResults, sortedCards] = useState([]);
 
     useEffect(() => {
+
         async function loadCards() {
           try {
             const response = await fetch(API);
@@ -44,6 +45,7 @@ export const Search = () => {
         const sorted = Object.values(pokeCards).filter((pokeCard) =>
         pokeCard.name.toLowerCase().includes(inputValue)
         );
+        
         sortedCards(sorted);
       };
 
@@ -56,6 +58,7 @@ export const Search = () => {
                 id,
                 name,
                 supertype,
+                imageUrl,
               } = pokeCard;
               
               return (
@@ -66,6 +69,7 @@ export const Search = () => {
                     id={id}
                     name={name}
                     supertype={supertype}
+                    imageUrl={imageUrl}
                   >
                     {pokeCard.name}
                   </li>

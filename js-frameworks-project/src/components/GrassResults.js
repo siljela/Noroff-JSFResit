@@ -40,8 +40,8 @@ function GrassCards() {
        return (
         <div className="cards">
             {pokeCards.map(function (card) {
-                const { id, name, supertype } = card;
-                return <CardItem key={id} id={id} name={name} supertype={supertype} />;
+                const { id, name, supertype, imageUrl } = card;
+                return <CardItem key={id} id={id} name={name} imageUrl={imageUrl} supertype={supertype} />;
             })}
         </div>
        );

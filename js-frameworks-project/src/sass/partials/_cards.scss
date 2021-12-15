@@ -1,0 +1,14 @@
+.pokeCard {
+  background: linear-gradient(to left, $purple, $pink);
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, $purple, $pink);
+  box-shadow: 10px 10px $colour-ui-third;
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+.pokeDetails {
+  background-color: rgba(255, 255, 255, 0.6);
+}

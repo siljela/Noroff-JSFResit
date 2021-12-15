@@ -3,9 +3,9 @@ import Heading from '../components/Heading'
 
 function Header() {
     return (
-        <div>
+        <header>
             <Heading content="Hello"/>
-        </div>
+        </header>
     )
 }
 
