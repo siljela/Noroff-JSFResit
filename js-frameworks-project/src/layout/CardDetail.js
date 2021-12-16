@@ -47,15 +47,41 @@ function CardDetail() {
 	}
 
 	if (error) {
-		return <div>An error occured: {error}</div>;
+		return <div className="errorMsg">Dammit! We were unable to locate the cards. Please refresh the page.</div>;
 	}
 
     document.title = `${pokeCards.name}`;
 
     return (
 		<div className="card-detail">
-			<h1>{pokeCards.name}</h1>
-			<p>{pokeCards.supertype}</p>
+			{/* <img src={pokeCards.imageUrlHiRes}></img>
+			<div>
+				<h1>{pokeCards.name}</h1>
+				<p>{pokeCards.supertype}</p>
+			</div> */}
+			<table>
+				<tr>
+					<th>Name</th>
+					<td>{pokeCards.name}</td>
+				</tr>
+				<tr>
+					<th>Supertype</th>
+					<td>{pokeCards.supertype}</td>
+				</tr>
+				<tr>
+					<th rowspan="4"><img src={pokeCards.imageUrlHiRes}></img></th>
+					<td>555-8745</td>
+				</tr>
+				<tr>
+					<td>555-8745</td>
+				</tr>
+				<tr>
+					<td>555-8745</td>
+				</tr>
+				<tr>
+					<td>555-8745</td>
+				</tr>
+			</table>
 		</div>
 	);
 }

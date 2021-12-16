@@ -1,11 +1,52 @@
 body {
   font-family: $font-primary;
-  background: $colour-background;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
+  background-size: cover;
+  background-attachment: fixed;
 }
-header {
-  background-image: url("https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80");
-  filter: brightness(150%);
-  padding: 200px;
+.header-image {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+.main {
+  margin: 50px;
+  background: $colour-background;
+  border: 5px solid $purple;
+  border-radius: 20px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+  letter-spacing: 0.2rem;
+}
+.nav-item a {
+  text-decoration: none;
+  color: $colour-ui-primary;
+}
+.active,
+.nav-item a:hover {
+  font-weight: bold;
+}
+
+.vertical {
+  border-left: 6px solid black;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+}
+
+.pokemon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 200px;
 }
 
 footer {
@@ -20,4 +61,9 @@ footer a {
 }
 footer a:hover {
   filter: brightness(1.75);
+}
+@media only screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
 }

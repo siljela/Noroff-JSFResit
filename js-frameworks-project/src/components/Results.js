@@ -19,7 +19,7 @@ function Cards() {
            
            setCards(json);
           } else {
-           setError("An error occured");
+           setError("Oh damn. The cards are unavailable. Please try to refresh the page.");
           }
          } catch (error) {
           setError(error.toString());
@@ -31,19 +31,19 @@ function Cards() {
        }, []);
 
        if (loading) {
-        return <div>Loading...</div>;
+        return <div className="loadMsg">Your cards are loading..</div>;
        }
       
        if (error) {
-        return <div>ERROR: An error occured</div>;
+        return <div class="errorMsg">Oh no! The cards are currently unavailble. Please refresh the page.</div>;
        }
 
        return (
         <div className="cards">
             {pokeCards.map(function (card) {
 
-                const { id, name, supertype, imageUrl } = card;
-                return <CardItem key={id} id={id} name={name} imageUrl={imageUrl} supertype={supertype} />;
+                const { id, name, supertype, imageUrl, subtype, artist, rarity } = card;
+                return <CardItem key={id} id={id} name={name} imageUrl={imageUrl} supertype={supertype} subtype={subtype} artist={artist} rarity={rarity}/>;
             })}
         </div>
        );

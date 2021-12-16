@@ -1,8 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 function Heading(props) {
-    return <h1>{props.content}</h1>;
+    return (
+        <>
+            <h1>{props.content}</h1>
+            <h2>{props.secondHeadline}</h2>
+        </>
+    );
 }
 
 export default Heading;

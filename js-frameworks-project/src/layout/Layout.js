@@ -12,15 +12,15 @@ import Contact from "./Contact";
 function Layout() {
  return (
     <Router>
-        <ul>
-          <li>
-            <Link to="/">Homepage</Link>
+        <ul className="nav">
+          <li className="nav-item">
+            <Link to="/" >Homepage | </Link>
           </li>
-          <li>
-            <Link to="/grass">Grass</Link>
+          <li className="nav-item">
+            <Link to="/grass"> Grass | </Link>
           </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+          <li className="nav-item">
+            <Link to="/contact"> Contact</Link>
           </li>
         </ul>
 

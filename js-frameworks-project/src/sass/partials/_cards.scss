@@ -1,3 +1,7 @@
+.cards {
+  text-align: center;
+}
+
 .pokeCard {
   background: linear-gradient(to left, $purple, $pink);
   border: 10px solid;
@@ -6,9 +10,76 @@
   border-image-source: linear-gradient(to left, $purple, $pink);
   box-shadow: 10px 10px $colour-ui-third;
   margin: 20px;
-  max-width: 300px;
+  max-width: 240px;
   text-align: center;
+  display: inline-block;
+  color: $colour-ui-secondary;
+}
+// .grass {
+//   background: linear-gradient(to left, $green, $yellow);
+// }
+.grass .pokeCard {
+  background: linear-gradient(to left, $green, $yellow);
+  border-image-source: linear-gradient(to left, $green, $yellow);
 }
 .pokeDetails {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px 0;
+}
+.pokeCard:hover {
+  transform: scale(1.05);
+}
+.pokeCard h2,
+.pokeCard p {
+  margin: 0;
+}
+table {
+  margin: 0 auto;
+  font-size: 14px;
+}
+table h2 {
+  text-align: center;
+  font-family: "Mansalva", cursive;
+  font-size: 40px;
+  text-shadow: 1px 1px $colour-ui-third;
+}
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+td {
+  text-align: right;
+}
+.rarity {
+  position: absolute;
+  background-color: $purple;
+  color: $colour-ui-primary;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 100px;
+  margin-left: 120px;
+  margin-top: -35px;
+  padding: 10px 15px;
+  letter-spacing: 0.1rem;
+}
+button {
+  background-color: $pink;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+  border: none;
+}
+.grass .rarity {
+  background-color: $green;
+}
+.grass button {
+  background-color: $yellow;
+}
+button:hover {
+  filter: brightness(110%);
+  text-decoration: underline;
 }

@@ -37,7 +37,7 @@ export const Search = () => {
         </div>;
       }
       if (error) {
-        return <div>Unable to locate cards.</div>;
+        return <div className="errorMsg">Unable to locate cards.</div>;
       }
 
       const searching = (e) => {
@@ -59,6 +59,9 @@ export const Search = () => {
                 name,
                 supertype,
                 imageUrl,
+                subtype,
+                artist,
+                rarity,
               } = pokeCard;
               
               return (
@@ -70,6 +73,9 @@ export const Search = () => {
                     name={name}
                     supertype={supertype}
                     imageUrl={imageUrl}
+                    subtype={subtype}
+                    artist={artist}
+                    rarity={rarity}
                   >
                     {pokeCard.name}
                   </li>

@@ -1,7 +1,13 @@
-h1 {
-  color: $colour-primary;
+h1,
+h2 {
+  font-family: "Mansalva", cursive;
+  text-align: center;
 }
-
+h1 {
+  color: $purple;
+  text-shadow: 3px 3px black;
+  font-size: 54px;
+}
 p {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
