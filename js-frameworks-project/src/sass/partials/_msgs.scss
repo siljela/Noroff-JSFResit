@@ -1,14 +1,17 @@
-.errorMsg,
-.loadMsg {
+.error-message,
+.load-message {
   font-family: "Mansalva", cursive;
   font-size: 42px;
   padding: 200px 40px;
   text-align: center;
   background-color: $colour-ui-primary;
 }
-.errorMsg {
+.error-message {
   color: $purple;
 }
-.loadMsg {
+.load-message {
   color: $green;
+}
+.visually-hidden {
+  visibility: hidden;
 }

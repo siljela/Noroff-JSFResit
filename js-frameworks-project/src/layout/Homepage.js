@@ -1,16 +1,18 @@
 import React from 'react'
 import Heading from '../components/Heading'
-import Pokemon from '../components/Pokemon'
+import Pokemon from '../components/images/Pokemon'
 import Results from '../components/Results'
 import { Search } from '../components/Search'
+import Backtotop from '../components/Backtotop'
 
 function Homepage() {
     return (
-            <div className="main">
+            <div className="homepage-main">
                 <Heading content="Pokemon cards" secondHeadline="I choose.."/>
                 <Search />
                 <Results />
                 <Pokemon />
+                <Backtotop />
             </div>
     )
 }

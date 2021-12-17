@@ -30,11 +30,11 @@ function GrassCards() {
        }, []);
 
        if (loading) {
-        return <div>We're loading the grass cards. Please be patient.</div>;
+        return <div className="load-message">We're loading the grass cards. Please be patient.</div>;
        }
       
        if (error) {
-        return <div className="errorMsg">Oh no! We apologise, the cards are currently unavailble. Please refresh the page.</div>;
+        return <div className="error-message">Oh no! We apologise, the cards are currently unavailble. Please refresh the page.</div>;
        }
 
        return (

@@ -37,7 +37,7 @@ export const Search = () => {
         </div>;
       }
       if (error) {
-        return <div className="errorMsg">Unable to locate cards.</div>;
+        return <div className="error-message">Oh no! The cards are currently unavailble. Please refresh the page in a moment. </div>;
       }
 
       const searching = (e) => {
@@ -51,8 +51,8 @@ export const Search = () => {
 
     return (
         <>
-            <input onChange={(e) => searching(e)} placeholder="Search card name" aria-label="Search card name"></input>
-            <ul>
+            <input onChange={(e) => searching(e)} placeholder="Search card name" aria-label="Search pokemon name" className="homepage-search"></input>
+            <ul className="homepage-search_results">
             {searchResults.map((pokeCard) => {
               let {
                 id,
@@ -67,7 +67,7 @@ export const Search = () => {
               return (
                 <>
                 <Link to={`/cards/${id}`}>
-                  <li 
+                  <li className="homepage-search_results_name"
                     key={id}
                     id={id}
                     name={name}
@@ -87,5 +87,3 @@ export const Search = () => {
         </>
     );
 };
-
-// export default Search

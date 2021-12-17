@@ -1,5 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import PokemonGroup from "../components/images/PokemonGroup";
+import Heading from "../components/Heading";
 // import Select from 'react-select'
 
 function Contact() {
@@ -14,27 +16,32 @@ function Contact() {
     // console.log(errors);
 
     return (
-        <>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true })} />
-                {errors.name && <span>Your name is missing</span>}
+        <div className="contact-main">
+                <Heading content="Contact us" secondHeadline="Please write your enquiry below.."/>
 
-                <input type="tel" placeholder="phone number" {...register("phoneNumber", {required: true, pattern: /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{2}$/ })} />
-                {errors.phoneNumber && <span>Phone number is missing</span>}
+                <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+                    <input placeholder="Your name" {...register("name", { required: true })} />
+                    {errors.name && <span className="form-error">Your name is missing</span>}
 
-                <select {...register("type", { required: true })}>
-                    <option value="enquiry">Enquiry</option>
-                    <option value="complaint">Complaint</option>
-                    <option value="compliment">Compliment</option>
-                    <option value="general">General Message</option>
-                </select>
+                    <input type="tel" placeholder="Phone number" {...register("phoneNumber", {required: true, pattern: /^([+]?\d{1,2}[-\s]?|)\d{3}[-\s]?\d{3}[-\s]?\d{2}$/ })} />
+                    {errors.phoneNumber && <span className="form-error">Phone number is missing</span>}
 
-                <textarea {...register("comment", { required: true })} />
-                {errors.comment && <span>Please write a comment</span>}
+                    <select {...register("type", { required: true })}>
+                        <option value="enquiry">Enquiry</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="compliment">Compliment</option>
+                        <option value="general">General Message</option>
+                    </select>
 
-                <button>Send</button>
-            </form>
-        </>
+                    <textarea placeholder="Question or comment here" {...register("comment", { required: true })} />
+                    {errors.comment && <span className="form-error">Please write a comment</span>}
+
+                    <button>Send</button>
+                </form>
+
+                <PokemonGroup />
+            </div>
+
     );
 }
 

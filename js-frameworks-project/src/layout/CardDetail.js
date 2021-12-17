@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { URL } from "../constants/api";
+import Pokeball from '../components/images/Pokeball';
+import Heading from '../components/Heading';
 
 function CardDetail() {
     const [pokeCards, setCards] = useState([]);
@@ -47,42 +49,47 @@ function CardDetail() {
 	}
 
 	if (error) {
-		return <div className="errorMsg">Dammit! We were unable to locate the cards. Please refresh the page.</div>;
+		return <div className="error-message">Dammit! We were unable to locate the cards. Please refresh the page.</div>;
 	}
 
     document.title = `${pokeCards.name}`;
 
     return (
-		<div className="card-detail">
-			{/* <img src={pokeCards.imageUrlHiRes}></img>
-			<div>
-				<h1>{pokeCards.name}</h1>
-				<p>{pokeCards.supertype}</p>
-			</div> */}
-			<table>
-				<tr>
-					<th>Name</th>
-					<td>{pokeCards.name}</td>
-				</tr>
-				<tr>
-					<th>Supertype</th>
-					<td>{pokeCards.supertype}</td>
-				</tr>
-				<tr>
-					<th rowspan="4"><img src={pokeCards.imageUrlHiRes}></img></th>
-					<td>555-8745</td>
-				</tr>
-				<tr>
-					<td>555-8745</td>
-				</tr>
-				<tr>
-					<td>555-8745</td>
-				</tr>
-				<tr>
-					<td>555-8745</td>
-				</tr>
-			</table>
-		</div>
+		<div className="carddetail-main">
+                <Heading content={pokeCards.name} />
+				<div className="carddetail-content">
+					<img  className="carddetail-image" src={pokeCards.imageUrlHiRes}></img>
+					<table className="carddetail-content_table">
+						<tr>
+							<th>Name</th>
+							<td>{pokeCards.name}</td>
+						</tr>
+						<tr>
+							<th>Supertype</th>
+							<td>{pokeCards.supertype}</td>
+						</tr>
+						<tr>
+							<th>Number</th>
+							<td>{pokeCards.number}</td>
+						</tr>
+						<tr>
+							<th>HP</th>
+							<td class="carddetail-bar">
+								<div class="carddetail-bar_hp" style={{width: pokeCards.hp + '%'}}>{pokeCards.hp}%</div>
+							</td>
+						</tr>
+						<tr>
+							<th>Rarity</th>
+							<td>{pokeCards.rarity}</td>
+						</tr>
+						<tr>
+							<th>Artist</th>
+							<td>{pokeCards.artist}</td>
+						</tr>
+					</table>
+				</div>
+                <Pokeball />
+            </div>
 	);
 }
 

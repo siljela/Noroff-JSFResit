@@ -31,12 +31,12 @@ function Cards() {
        }, []);
 
        if (loading) {
-        return <div className="loadMsg">Your cards are loading..</div>;
+        return <div className="load-message">Your cards are loading..</div>;
        }
       
-       if (error) {
-        return <div class="errorMsg">Oh no! The cards are currently unavailble. Please refresh the page.</div>;
-       }
+    //    if (error) {
+    //     return <div class="error-message">Please refresh the page.</div>;
+    //    }
 
        return (
         <div className="cards">

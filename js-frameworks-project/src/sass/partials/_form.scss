@@ -1,0 +1,18 @@
+.contact-form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  letter-spacing: 0.1rem;
+  color: $colour-ui-third;
+}
+.form-error {
+  color: $purple;
+  font-weight: bold;
+}

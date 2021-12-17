@@ -5,16 +5,58 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.toMain {
+  position: absolute;
+  margin-top: -83px;
+}
 .header-image {
   position: absolute;
   top: 3%;
   left: 3%;
 }
-.main {
+.homepage-main,
+.grass-main,
+.contact-main,
+.carddetail-main {
   margin: 50px;
-  background: $colour-background;
-  border: 5px solid $purple;
   border-radius: 20px;
+  background: $colour-background;
+}
+.homepage-main,
+.carddetail-main {
+  border: 5px solid $purple;
+}
+.grass-main {
+  border: 5px solid $green;
+}
+.contact-main {
+  border: 5px solid $yellow;
+}
+.homepage-search {
+  width: 80%;
+  margin: 0 10%;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.homepage-search_results {
+  background-color: $colour-ui-primary;
+  padding: 0;
+}
+.homepage-search_results_name {
+  list-style-type: none;
+  border: 1px solid $colour-ui-third;
+  padding: 20px;
+  text-decoration: none;
+  color: $colour-ui-secondary;
+}
+.homepage-search_results_name:hover {
+  background-color: $yellow;
+}
+.homepage-search_results a {
+  text-decoration: none;
 }
 .nav {
   list-style-type: none;
@@ -48,22 +90,50 @@ body {
   top: 20px;
   width: 200px;
 }
-
-footer {
+.footer {
   background-color: $colour-ui-secondary;
   color: $colour-ui-third;
   display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
 }
-footer a {
+.footer-list_item {
+  list-style-type: none;
+}
+.footer-list_item a {
   color: $colour-ui-third;
   text-decoration: none;
   list-style-type: none;
 }
-footer a:hover {
+.footer-list_item a:hover {
   filter: brightness(1.75);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
+  .nav {
+    justify-content: flex-end;
+    padding-right: 100px;
+  }
+  .pokemon {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 750px) {
   .nav {
     flex-direction: column;
+    text-align: right;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-image {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .nav {
+    padding-right: 10px;
   }
 }

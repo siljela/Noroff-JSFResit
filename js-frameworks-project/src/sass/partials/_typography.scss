@@ -1,5 +1,6 @@
 h1,
-h2 {
+h2,
+.homepage-search {
   font-family: "Mansalva", cursive;
   text-align: center;
 }
@@ -7,6 +8,9 @@ h1 {
   color: $purple;
   text-shadow: 3px 3px black;
   font-size: 54px;
+}
+.grass-main h1 {
+  color: $green;
 }
 p {
   border-top: 1px solid white;

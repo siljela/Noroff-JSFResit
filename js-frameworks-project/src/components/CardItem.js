@@ -7,8 +7,8 @@ function CardItem({ id, name, supertype, imageUrl, subtype, artist, rarity }) {
 			<Link to={`cards/${id}`}>
 				<div className="pokeCard">
 					<img src={imageUrl} alt="pokemon card"/>
-					<div className="pokeDetails">
-						<div className="rarity">{rarity}</div>
+					<div className="pokeCard-details">
+						<div className="pokeCard-details_rarity">{rarity}</div>
 						<table>
 							<tr>
 								<td colspan="2"><h2>{name}</h2></td>
