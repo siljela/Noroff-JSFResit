@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { URL } from "../constants/api";
-import Pokeball from '../components/images/Pokeball';
-import Heading from '../components/Heading';
+import { URL } from "../../constants/api";
+import Pokeball from '../images/Pokeball';
+import Heading from '../Heading';
+import Backhome from '../Backhome';
 
 function CardDetail() {
     const [pokeCards, setCards] = useState([]);
@@ -73,9 +74,9 @@ function CardDetail() {
 							<td>{pokeCards.number}</td>
 						</tr>
 						<tr>
-							<th>HP</th>
+							<th>Hit Point</th>
 							<td class="carddetail-bar">
-								<div class="carddetail-bar_hp" style={{width: pokeCards.hp + '%'}}>{pokeCards.hp}%</div>
+								<div class="carddetail-bar_hp" style={{width: pokeCards.hp + '%'}}>{pokeCards.hp ? `${pokeCards.hp}%` : 'No HP'}</div>
 							</td>
 						</tr>
 						<tr>
@@ -89,6 +90,7 @@ function CardDetail() {
 					</table>
 				</div>
                 <Pokeball />
+				<Backhome />
             </div>
 	);
 }

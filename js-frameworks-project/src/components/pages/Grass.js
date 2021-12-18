@@ -1,8 +1,8 @@
 import React from 'react'
-import GrassCards from '../components/GrassResults';
-import Heading from '../components/Heading';
-import PokemonGreen from '../components/images/PokemonGreen';
-import Backtotop from '../components/Backtotop';
+import Backtotop from '../Backtotop';
+import Heading from '../Heading';
+import PokemonGreen from '../images/PokemonGreen'
+import GrassCards from '../GrassResults';
 
 function Grass() {
     return (

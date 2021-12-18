@@ -1,0 +1,23 @@
+button {
+  background-color: $pink;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+  border: none;
+}
+.grass-main button {
+  background-color: $yellow;
+}
+button:hover {
+  filter: brightness(110%);
+  text-decoration: underline;
+}
+.contact-form_submit {
+  background-color: $purple;
+  border-radius: 20px;
+  color: $colour-ui-primary;
+  margin-bottom: 50px;
+}

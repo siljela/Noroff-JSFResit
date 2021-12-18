@@ -11,9 +11,9 @@ function Footer() {
                 </ul>
                 <ul className="footer-list">
                     <h3>Social media</h3>
-                    <li className="footer-list_item"><a href="twitter.com">Follow us on Twitter &rsaquo;</a></li>
-                    <li className="footer-list_item"><a href="facebook.com">Follow us on Facebook &rsaquo;</a></li>
-                    <li className="footer-list_item"><a href="instagram.com">Follow us on Instagram &rsaquo;</a></li>
+                    <li className="footer-list_item"><a href="https://twitter.com">Follow us on Twitter &rsaquo;</a></li>
+                    <li className="footer-list_item"><a href="https://facebook.com">Follow us on Facebook &rsaquo;</a></li>
+                    <li className="footer-list_item"><a href="https://instagram.com">Follow us on Instagram &rsaquo;</a></li>
                 </ul>
                 <ul className="footer-list">
                     <h3>Pokemon cards</h3>

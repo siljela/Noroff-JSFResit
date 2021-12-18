@@ -1,9 +1,10 @@
 import React from 'react'
-import Heading from '../components/Heading'
-import Pokemon from '../components/images/Pokemon'
-import Results from '../components/Results'
-import { Search } from '../components/Search'
-import Backtotop from '../components/Backtotop'
+import Backtotop from '../Backtotop'
+import Heading from '../Heading'
+import Pokemon from '../images/Pokemon'
+import Results from '../Results'
+import { Search } from '../Search'
+
 
 function Homepage() {
     return (

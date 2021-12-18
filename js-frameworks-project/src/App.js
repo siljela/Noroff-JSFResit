@@ -1,6 +1,6 @@
 import "./sass/style.scss";
 import Layout from "./layout/Layout";
-import Footer from "./layout/Footer";
+import Footer from "./components/Footer";
 import Logo from "./components/Logo";
 import ToMain from "./components/ToMain";
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <ToMain />
       <Logo />
-      <Layout />
+      <Layout id="#main"/>
       <Footer />
     </>
   );

@@ -4,10 +4,10 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Homepage from "./Homepage";
-import CardDetail from "./CardDetail";
-import Grass from "./Grass";
-import Contact from "./Contact";
+import Homepage from "../components/pages/Homepage";
+import CardDetail from "../components/pages/CardDetail";
+import Grass from "../components/pages/Grass";
+import Contact from "../components/pages/Contact";
 
 function Layout() {
  return (

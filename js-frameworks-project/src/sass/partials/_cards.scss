@@ -1,7 +1,6 @@
 .cards {
   text-align: center;
 }
-
 .pokeCard {
   background: linear-gradient(to left, $purple, $pink);
   border: 10px solid;
@@ -15,9 +14,6 @@
   display: inline-block;
   color: $colour-ui-secondary;
 }
-// .grass {
-//   background: linear-gradient(to left, $green, $yellow);
-// }
 .grass-main .pokeCard {
   background: linear-gradient(to left, $green, $yellow);
   border-image-source: linear-gradient(to left, $green, $yellow);
@@ -63,25 +59,9 @@
   padding: 10px 15px;
   letter-spacing: 0.1rem;
 }
-button {
-  background-color: $pink;
-  width: 100%;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px;
-  letter-spacing: 0.1rem;
-  border: none;
-}
+
 .grass-main .pokeCard-details_rarity {
   background-color: $green;
-}
-.grass-main button {
-  background-color: $yellow;
-}
-button:hover {
-  filter: brightness(110%);
-  text-decoration: underline;
 }
 
 .carddetail-content {
@@ -117,5 +97,17 @@ button:hover {
   }
   .carddetail-content_table {
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .pokeCard {
+    max-width: 200px;
+  }
+  .pokeCard-image {
+    max-width: 200px;
+  }
+  .pokeCard-details_rarity {
+    margin-left: 100px;
   }
 }

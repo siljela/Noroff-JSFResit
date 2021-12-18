@@ -41,12 +41,19 @@ export const Search = () => {
       }
 
       const searching = (e) => {
+        const searchResults = document.querySelector(".homepage-search_results");
         const inputValue = e.target.value.trim().toLowerCase();
         const sorted = Object.values(pokeCards).filter((pokeCard) =>
         pokeCard.name.toLowerCase().includes(inputValue)
         );
         
-        sortedCards(sorted);
+        if(inputValue === ""){
+          searchResults.style.display = "none";
+        } else {
+          searchResults.style.display = "block";
+          sortedCards(sorted);
+        }
+        // sortedCards(sorted);
       };
 
     return (

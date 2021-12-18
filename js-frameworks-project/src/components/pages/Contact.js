@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import PokemonGroup from "../components/images/PokemonGroup";
-import Heading from "../components/Heading";
-// import Select from 'react-select'
+import PokemonGroup from '../images/PokemonGroup'
+import Heading from '../Heading';
+import Backhome from '../Backhome';
 
 function Contact() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -10,10 +10,8 @@ function Contact() {
     function onSubmit(data) {
         console.log(data);
         const form = document.querySelector("form");
-        form.innerHTML = "<p>Form submitted. You will hear from us shortly.</p>";
+        form.innerHTML = `<p class="contact-form_sumitted">Yay, thanks! Your request is submitted. You will hear from us shortly.</p>`;
     }
-
-    // console.log(errors);
 
     return (
         <div className="contact-main">
@@ -36,10 +34,11 @@ function Contact() {
                     <textarea placeholder="Question or comment here" {...register("comment", { required: true })} />
                     {errors.comment && <span className="form-error">Please write a comment</span>}
 
-                    <button>Send</button>
+                    <button className="contact-form_submit">Send</button>
                 </form>
 
                 <PokemonGroup />
+                <Backhome />
             </div>
 
     );

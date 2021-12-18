@@ -6,7 +6,7 @@ function CardItem({ id, name, supertype, imageUrl, subtype, artist, rarity }) {
 		<>
 			<Link to={`cards/${id}`}>
 				<div className="pokeCard">
-					<img src={imageUrl} alt="pokemon card"/>
+					<img className="pokeCard-image" src={imageUrl} alt="pokemon card"/>
 					<div className="pokeCard-details">
 						<div className="pokeCard-details_rarity">{rarity}</div>
 						<table>
@@ -19,7 +19,7 @@ function CardItem({ id, name, supertype, imageUrl, subtype, artist, rarity }) {
 							</tr>
 							<tr>
 								<td>Attacks</td>
-								<th>{subtype}</th>
+								<th>{subtype ? `${subtype}` : 'No attacks'}</th>
 							</tr>
 							<tr>
 								<td>Artist</td>
