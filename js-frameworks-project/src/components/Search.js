@@ -63,12 +63,6 @@ export const Search = () => {
             {searchResults.map((pokeCard) => {
               let {
                 id,
-                name,
-                supertype,
-                imageUrl,
-                subtype,
-                artist,
-                rarity,
               } = pokeCard;
               
               return (
@@ -76,13 +70,6 @@ export const Search = () => {
                 <Link to={`/cards/${id}`}>
                   <li className="homepage-search_results_name"
                     key={id}
-                    id={id}
-                    name={name}
-                    supertype={supertype}
-                    imageUrl={imageUrl}
-                    subtype={subtype}
-                    artist={artist}
-                    rarity={rarity}
                   >
                     {pokeCard.name}
                   </li>

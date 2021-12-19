@@ -21,3 +21,12 @@ button:hover {
   color: $colour-ui-primary;
   margin-bottom: 50px;
 }
+.carddetail-viewBtn {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: $colour-ui-third;
+}
+.carddetail-viewBtn:hover {
+  color: $colour-ui-secondary;
+}

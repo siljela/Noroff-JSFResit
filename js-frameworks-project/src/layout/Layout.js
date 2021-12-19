@@ -14,10 +14,10 @@ function Layout() {
     <Router>
         <ul className="nav">
           <li className="nav-item">
-            <Link to="/" >Homepage | </Link>
+            <Link to="/" >Homepage <span className="nav-item_divider">|</span> </Link>
           </li>
           <li className="nav-item">
-            <Link to="/grass"> Grass | </Link>
+            <Link to="/grass"> Grass <span className="nav-item_divider">|</span> </Link>
           </li>
           <li className="nav-item">
             <Link to="/contact"> Contact</Link>

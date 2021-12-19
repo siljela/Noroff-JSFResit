@@ -7,6 +7,7 @@ import { Search } from '../Search'
 
 
 function Homepage() {
+    document.title = "Pokemon cards";
     return (
             <div className="homepage-main">
                 <Heading content="Pokemon cards" secondHeadline="I choose.."/>

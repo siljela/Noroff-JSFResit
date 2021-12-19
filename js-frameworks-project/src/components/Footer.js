@@ -18,7 +18,7 @@ function Footer() {
                 <ul className="footer-list">
                     <h3>Pokemon cards</h3>
                     <li className="footer-list_item">Poke Inc.</li>
-                    <li className="footer-list_item">copyright &commat; pokemon inc.</li>
+                    <li className="footer-list_item">copyright & pokemon inc.</li>
                     <li className="footer-list_item">published 19.12.2021</li>
                 </ul>
         </footer>

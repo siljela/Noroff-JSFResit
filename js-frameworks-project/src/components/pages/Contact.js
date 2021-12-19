@@ -5,6 +5,7 @@ import Heading from '../Heading';
 import Backhome from '../Backhome';
 
 function Contact() {
+    document.title = "Contact Pokemon cards";
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     function onSubmit(data) {

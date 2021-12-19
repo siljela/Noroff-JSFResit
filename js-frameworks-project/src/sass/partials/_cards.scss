@@ -72,6 +72,8 @@
 }
 .carddetail-image {
   max-width: 200px;
+  height: 100%;
+  margin-right: 20px;
 }
 .carddetail-bar {
   background-color: grey;
@@ -95,8 +97,14 @@
     max-width: 200px;
     margin: 40px auto;
   }
+  .carddetail-content td {
+    text-align: left;
+  }
   .carddetail-content_table {
     margin-top: 30px;
+  }
+  .carddetail-image {
+    margin-right: 0;
   }
 }
 

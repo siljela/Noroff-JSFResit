@@ -5,6 +5,7 @@ import PokemonGreen from '../images/PokemonGreen'
 import GrassCards from '../GrassResults';
 
 function Grass() {
+    document.title = "Grass-themed Pokemon cards";
     return (
         <div className="grass-main">
                 <Heading content="Grass Pokemon Cards" secondHeadline="I choose.."/>

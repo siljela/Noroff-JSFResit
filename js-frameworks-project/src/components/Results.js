@@ -34,9 +34,9 @@ function Cards() {
         return <div className="load-message">Your cards are loading..</div>;
        }
       
-    //    if (error) {
-    //     return <div class="error-message">Please refresh the page.</div>;
-    //    }
+       if (error) {
+        console.log("Unable to fetch data. Refresh the page");
+       }
 
        return (
         <div className="cards">
