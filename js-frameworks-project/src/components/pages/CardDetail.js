@@ -5,6 +5,7 @@ import { URL } from "../../constants/api";
 import Pokeball from '../images/Pokeball';
 import Heading from '../Heading';
 import Backhome from '../Backhome';
+import Readmore from '../Readmore';
 
 function CardDetail() {
     const [pokeCards, setCards] = useState([]);
@@ -93,7 +94,7 @@ function CardDetail() {
 						</tbody>
 					</table>
 
-					<div onClick={toggleDetails}><p className="carddetail-viewBtn">Read more +</p></div>
+					<div onClick={toggleDetails}><Readmore /></div>
 					<div>
 						{displayDetails ? 
 							<table>
